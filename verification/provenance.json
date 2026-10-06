@@ -1,0 +1,22 @@
+[
+  {
+    "minecraft": "26.2",
+    "repository": "https://github.com/MehVahdJukaar/FarmersDelightRefabricated",
+    "branch": "fabric/latest/26.2",
+    "commit": "f55a773870197eaed490ae381f82fc0a56907989",
+    "upstream_version_id": "RvMf1qzl",
+    "upstream_version": "26.2-3.6.26",
+    "upstream_jar": "FarmersDelight-26.2-3.6.26+refabricated.jar",
+    "sha512": "86a94c36e02081d6c24f47d53e103c80e915e500a9f92536ceaf6af916ac083e5458a48fc8bff2ebfb44d449b51d1a32d2a7c2c8e3d057f997de99147ace3bc6"
+  },
+  {
+    "minecraft": "26.3",
+    "repository": "https://github.com/MehVahdJukaar/FarmersDelightRefabricated",
+    "branch": "fabric/latest/26.3",
+    "commit": "615259dd453adec97b045765566a8f982b79cd71",
+    "upstream_version_id": "hTNvMewX",
+    "upstream_version": "26.3-3.6.27",
+    "upstream_jar": "FarmersDelight-26.3-3.6.27+refabricated.jar",
+    "sha512": "d7c66b883e3c900a5539b2fec91c8a81d73ad438437151019843b958584f4c45bcb29581846056ff83787efea53fe0cd244106b4856a9979d7088eebba54da44"
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "parent": "farmersdelight:main/eat_nourishing_food",
+  "criteria": {
+    "gleaming_salad": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "farmersdelight:gleaming_salad_block"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "honey_glazed_ham": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "farmersdelight:honey_glazed_ham_block"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "rice_roll_medley": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "farmersdelight:rice_roll_medley_block"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "roast_chicken": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "farmersdelight:roast_chicken_block"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "shepherds_pie": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "farmersdelight:shepherds_pie_block"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "stuffed_pumpkin": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "farmersdelight:stuffed_pumpkin_block"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.farmersdelight.place_feast.description"
+    },
+    "icon": {
+      "id": "farmersdelight:roast_chicken_block"
+    },
+    "title": {
+      "translate": "advancements.farmersdelight.place_feast.title"
+    }
+  },
+  "requirements": [
+    [
+      "roast_chicken",
+      "stuffed_pumpkin",
+      "honey_glazed_ham",
+      "shepherds_pie",
+      "gleaming_salad",
+      "rice_roll_medley"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

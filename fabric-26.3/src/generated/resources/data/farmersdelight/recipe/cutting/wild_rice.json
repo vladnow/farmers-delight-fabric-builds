@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    "farmersdelight:wild_rice"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "farmersdelight:rice"
+      }
+    },
+    {
+      "chance": 0.5,
+      "item": {
+        "id": "farmersdelight:straw"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

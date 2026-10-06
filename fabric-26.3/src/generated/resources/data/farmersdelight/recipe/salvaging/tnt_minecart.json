@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    "minecraft:tnt_minecart"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "minecraft:minecart"
+      }
+    },
+    {
+      "item": {
+        "id": "minecraft:tnt"
+      }
+    }
+  ],
+  "sound": "minecraft:block.metal.break",
+  "tool": {
+    "fabric:type": "fabric:any",
+    "ingredients": [
+      {
+        "fabric:type": "farmersdelight:item_ability",
+        "action": "hoe_dig"
+      },
+      "#minecraft:hoes"
+    ]
+  }
+}

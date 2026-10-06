@@ -1,0 +1,42 @@
+{
+  "publication_status": "requires_explicit_author_permission_for_modrinth_reupload",
+  "suggested_repository_name": "farmers-delight-fabric-builds",
+  "title": "Farmer's Delight Source Builds",
+  "summary": "Unofficial source builds of the existing farming and cooking Fabric port, with corresponding sources and build information.",
+  "project_type": "mod",
+  "license_id": "MIT",
+  "license_notes": "Preserve upstream LICENSE, LGPL-2.1-only notices and BluSunrize file notices; see PUBLISHING.ru.md.",
+  "client_side": "required",
+  "server_side": "required",
+  "categories": ["food", "decoration"],
+  "description_en": "modrinth-description.en.md",
+  "description_ru": "modrinth-description.ru.md",
+  "source_url": "https://github.com/vladnow/farmers-delight-fabric-builds",
+  "issues_url": "https://github.com/vladnow/farmers-delight-fabric-builds/issues",
+  "links_note": "Fill with the real public repository and issue tracker before uploading. Do not direct issues for your distribution to upstream without their agreement.",
+  "content_disclosures": ["Contains Derivative Content", "AI-generated text"],
+  "disclosure_ui_note": "Use the current Modrinth Content Disclosures controls; AI-generated text may be grouped under AI-generated content. Credit and link the original mod and Fabric port in the derivative-content disclosure.",
+  "disclosure_reason": "The prepared page text and publication materials were written with generative assistance; Modrinth Content Rules 6.1(4) applies.",
+  "icon": null,
+  "icon_note": "Use an independently permitted icon. No newly generated page images are included.",
+  "versions": [
+    {
+      "minecraft": "26.2",
+      "version_number": "26.2-3.6.26+sourcebuild",
+      "version_type": "release",
+      "loaders": ["fabric"],
+      "game_versions": ["26.2"],
+      "dependencies": [{"project_id": "P7dR8mSH", "dependency_type": "required"}],
+      "local_mod_jar": "dist/26.2/local-build/FarmersDelight-26.2-3.6.26+refabricated.jar"
+    },
+    {
+      "minecraft": "26.3",
+      "version_number": "26.3-3.6.27+sourcebuild",
+      "version_type": "release",
+      "loaders": ["fabric"],
+      "game_versions": ["26.3"],
+      "dependencies": [{"project_id": "P7dR8mSH", "dependency_type": "required"}],
+      "local_mod_jar": "dist/26.3/local-build/FarmersDelight-26.3-3.6.27+refabricated.jar"
+    }
+  ]
+}

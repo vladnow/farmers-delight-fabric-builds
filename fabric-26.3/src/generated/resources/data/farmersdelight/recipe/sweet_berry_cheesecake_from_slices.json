@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fd_sweet_berry_cheesecake",
+  "key": {
+    "#": "farmersdelight:sweet_berry_cheesecake_slice"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "farmersdelight:sweet_berry_cheesecake"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "minecraft": {
+    "26.2": {
+      "upstream": {
+        "file": "dist/26.2/FarmersDelight-26.2-3.6.26+refabricated.jar",
+        "version": "26.2-3.6.26+refabricated",
+        "sha256": "142a0166497d811cb1fd5528a62e3a0bd1e788506ad2769d303d159c9be91ec2",
+        "class_count": 374,
+        "class_major_versions": [
+          69
+        ],
+        "json_count": 1925,
+        "mixin_count": 38,
+        "entrypoints_and_mixins_present": true,
+        "archive_crc_valid": true
+      },
+      "local_build": {
+        "file": "dist/26.2/local-build/FarmersDelight-26.2-3.6.26+refabricated.jar",
+        "version": "26.2-3.6.26+refabricated",
+        "sha256": "7120479a4252436e5fc02a20707281bcbeb514d99329ce4e8146d749edd04413",
+        "class_count": 374,
+        "class_major_versions": [
+          69
+        ],
+        "json_count": 1925,
+        "mixin_count": 38,
+        "entrypoints_and_mixins_present": true,
+        "archive_crc_valid": true
+      },
+      "upstream_sha512_matches_modrinth": true,
+      "fabric_api_sha512_matches_modrinth": true,
+      "java_sources_and_game_assets_unchanged": true,
+      "source_jar_sha256": "f0d9ab5d26e204b59fc4e8f6ff69b68ce84f7cf3663ae431a0614749be3ab943",
+      "fabric_api_sha256": "acb7dc90a0430519c49548074d3fbf6fd81d13063f08f0af344b2a6b08a42620"
+    },
+    "26.3": {
+      "upstream": {
+        "file": "dist/26.3/FarmersDelight-26.3-3.6.27+refabricated.jar",
+        "version": "26.3-3.6.27+refabricated",
+        "sha256": "07aa1346c23010c5f40405ce63cb8a793f5c246cff331aa892ef9dfdae523f17",
+        "class_count": 372,
+        "class_major_versions": [
+          69
+        ],
+        "json_count": 1944,
+        "mixin_count": 37,
+        "entrypoints_and_mixins_present": true,
+        "archive_crc_valid": true
+      },
+      "local_build": {
+        "file": "dist/26.3/local-build/FarmersDelight-26.3-3.6.27+refabricated.jar",
+        "version": "26.3-3.6.27+refabricated",
+        "sha256": "39467699346255221a4e88104be4e8772fda0629cbe75f7cfcb5d915e80435cf",
+        "class_count": 372,
+        "class_major_versions": [
+          69
+        ],
+        "json_count": 1944,
+        "mixin_count": 37,
+        "entrypoints_and_mixins_present": true,
+        "archive_crc_valid": true
+      },
+      "upstream_sha512_matches_modrinth": true,
+      "fabric_api_sha512_matches_modrinth": true,
+      "java_sources_and_game_assets_unchanged": true,
+      "source_jar_sha256": "b02fcfc10534366fd3ef9d70705ce8dfae70d88c0e60b41752e62ee790ead75b",
+      "fabric_api_sha256": "e7006958b33ba51f363c992fd0fc3be7ad039a17ec57483168badedc5944ddd7"
+    }
+  }
+}

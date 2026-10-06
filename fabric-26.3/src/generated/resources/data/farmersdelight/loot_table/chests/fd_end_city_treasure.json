@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:enchant_with_levels",
+            "levels": {
+              "type": "minecraft:uniform",
+              "max": 39,
+              "min": 20
+            },
+            "options": "#minecraft:on_random_loot"
+          },
+          "name": "farmersdelight:diamond_knife"
+        },
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:enchant_with_levels",
+            "levels": {
+              "type": "minecraft:uniform",
+              "max": 39,
+              "min": 20
+            },
+            "options": "#minecraft:on_random_loot"
+          },
+          "name": "farmersdelight:iron_knife"
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 6
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

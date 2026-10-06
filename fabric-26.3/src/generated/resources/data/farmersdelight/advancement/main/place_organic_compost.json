@@ -1,0 +1,32 @@
+{
+  "parent": "farmersdelight:main/harvest_straw",
+  "criteria": {
+    "place_organic_compost": {
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "farmersdelight:organic_compost"
+        }
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.farmersdelight.place_organic_compost.description"
+    },
+    "icon": {
+      "id": "farmersdelight:organic_compost"
+    },
+    "title": {
+      "translate": "advancements.farmersdelight.place_organic_compost.title"
+    }
+  },
+  "requirements": [
+    [
+      "place_organic_compost"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

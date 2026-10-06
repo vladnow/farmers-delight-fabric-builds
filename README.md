@@ -1,51 +1,66 @@
-# Farmer's Delight Refabricated
+# Farmer's Delight — Fabric source builds
 
-<a href="https://www.curseforge.com/minecraft/mc-mods/farmers-delight-refabricated">
-  <img src="http://cf.way2muchnoise.eu/full_993166_downloads.svg" alt="Curseforge Downloads">
-</a>
-<a href="https://discord.cassian.cc/">
-  <img alt="Cassian's Discord" src="https://img.shields.io/discord/790151253144895508?color=brightgreen&label=Discord">
-</a>
-<br>
-<img src="https://cdn.modrinth.com/data/cached_images/55f4eef09b087d3b08a792e1c7c224e5796cbb71.png" width="50%">
+Source and build preparation for the existing **Farmer's Delight Refabricated** port on Minecraft **26.2** and **26.3**. This is an unofficial source-build collection. The original mod is by **vectorwing**; the Fabric port is maintained by **MehVahdJukaar, ChrysanthCow and cassiancc**, with additional upstream contributors. This collection does not claim authorship of the mod or of its Fabric port.
 
-## For the official Forge version of the mod's GitHub, please go [here](https://github.com/vectorwing/FarmersDelight/).
+Repository: https://github.com/vladnow/farmers-delight-fabric-builds
 
-### Overview
+Prepared downloads: https://github.com/vladnow/farmers-delight-fabric-builds/releases
 
-**Farmer's Delight** is a mod that gently expands upon farming and cooking in Minecraft.
+## Versions
 
-Using a simple cooking system and a few familiar ingredients, you'll be able to prepare a wide variety of **hearty meals**: from sandwiches to salads and stews, from beautiful desserts to mouth-watering feasts, no ingredient will be left behind in your kitchen!
+| Minecraft | Fabric port | Minimum loader used for verification | Fabric API |
+| --- | --- | --- | --- |
+| 26.2 | 3.6.26 | 0.19.3 | 0.157.0+26.2 |
+| 26.3 | 3.6.27 | 0.19.5 | 0.160.4+26.3 |
 
-It also introduces a rich set of utilities: a way to **improve the very soil** your crops grow in, a brand new kind of tool to **scavenge resources** with, cute **decorations** for your builds, and many blocks and items to help you on your adventure!
+Use **Java 25**. Both client and server need the mod and Fabric API. Recipe viewers and configuration screens are optional. Only install one mod with the ID `farmersdelight` in a game instance.
 
-It's time to farm a little bit of everything!
+## Install
 
-### Contributing
+Use the JAR files for your exact Minecraft version from `dist/26.2` or `dist/26.3`. Each directory includes a checksum-verified upstream mod JAR and the Fabric API version listed above. Files in a `local-build` subdirectory are built here from the included sources; choose either that mod JAR or the upstream mod JAR. A `-sources.jar` is for developers and must not be installed as the mod.
 
-Thank you for visiting the repository! If you'd like to contribute with the mod, feel free to check the wiki for more details, or take a look at the issues page!
+Install Fabric Loader, then put the mod and Fabric API in the instance's `mods` directory. The same files are needed on a Fabric server. See `verification/TEST-REPORT.md` for the precise extent of local verification.
 
-I am open to constructive feedback about the mod's code: if you spot any glaring mistakes in my code, and/or you know a better way to accomplish something, feel free to open an issue/PR about it. Any help is appreciated!
+## Build
 
-### Depending on Farmer's Delight Refabricated
-Starting from 3.3.3, Farmer's Delight Refabricated can be depended on within development environments through Cassian's Maven (https://maven.cassian.cc/).
+Each `fabric-26.x` directory is an independent Gradle project. On Windows, from this directory:
 
-To do so, assuming you have a field in your gradle.properties named `fdrf_version`.
-```groovy
-repositories {
-    maven {
-        name = "Cassian's Maven"
-        url = 'https://maven.cassian.cc'
-    }
-}
-dependencies {
-    modImplementation("vectorwing:FarmersDelight:${fdrf_version}") {
-        exclude(group: "net.fabricmc")
-    }
-}
+```powershell
+./build.ps1 -Minecraft all -JavaHome 'C:/path/to/jdk-25'
 ```
 
-Replace the `x`s with the current version number.
-```properties
-fdrf_version=26.1-x.x.x+refabricated
+The prepared workspace also has a portable JDK in `.tools`; `build.ps1` can discover it automatically when `JAVA_HOME` is unset. It is excluded from the source archive. Builds need internet access to download dependencies.
+
+On Linux/macOS with JDK 25:
+
+```sh
+cd fabric-26.2
+chmod +x gradlew
+./gradlew build --no-daemon
 ```
+
+Repeat in `fabric-26.3` for Minecraft 26.3. Outputs are in each project's `build/libs`.
+
+## GitHub
+
+Unpack `farmers-delight-fabric-sources.zip` into an empty directory and upload its contents to a new repository, for example `farmers-delight-fabric-builds`. The archive includes both complete source projects, licenses, provenance and a GitHub Actions build matrix. It excludes nested Git repositories, downloaded tools, caches and binary game files. The original local checkouts retain Git metadata for the pinned upstream snapshots.
+
+When uploading many files, use Git or GitHub Desktop rather than the browser's file uploader. Create an empty repository and upload the unpacked source tree. When adding a release, attach the corresponding source ZIP alongside binary downloads to preserve access to the included third-party sources.
+
+CI builds both versions and attaches JAR artifacts. It does not publish to Modrinth or CurseForge. Keep the attribution, licenses and source files when distributing builds. The upstream commits and original release IDs are recorded in `verification/provenance.json`.
+
+## Publication and naming
+
+Read `PUBLISHING.ru.md` before uploading a separate Modrinth project. MIT permits modification and redistribution while retaining notices; third-party files have additional licenses. A direct reupload of an existing port needs author permission under Modrinth's rules. This collection does not introduce a substantial gameplay fork.
+
+Use a clearly distinguished repository name and describe it as an unofficial source build. No permission to present this collection as the official project, or to use an author's name as your own identity, is implied.
+
+## Upstream
+
+- Original: https://github.com/vectorwing/FarmersDelight
+- Fabric sources: https://github.com/MehVahdJukaar/FarmersDelightRefabricated
+- Existing Fabric releases: https://modrinth.com/mod/farmers-delight-refabricated
+
+## По-русски
+
+Здесь подготовлены исходники существующего Fabric-порта для 26.2 и 26.3, готовые файлы мода и инструкции для GitHub. Для установки открой `dist` и выбери папку своей версии. Установи Fabric Loader, затем положи JAR мода и Fabric API в `mods`. Сборку исходников запускает `build.ps1`. Условия отдельной публикации и использования названия описаны в `PUBLISHING.ru.md`; результаты проверок — в `verification/TEST-REPORT.md`.

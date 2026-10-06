@@ -1,0 +1,56 @@
+{
+  "game_versions": [
+    "26.2"
+  ],
+  "loaders": [
+    "fabric"
+  ],
+  "environment": "client_and_server",
+  "id": "RvMf1qzl",
+  "project_id": "7vxePowz",
+  "author_id": "k9zWRRPK",
+  "featured": false,
+  "name": "Farmer's Delight Refabricated 3.6.26 - 26.2",
+  "version_number": "26.2-3.6.26",
+  "changelog": "### Fixes\n- Missing pumpkin pie tooltip.",
+  "changelog_url": null,
+  "date_published": "2026-09-17T20:45:44.659732Z",
+  "downloads": 42202,
+  "version_type": "release",
+  "status": "listed",
+  "requested_status": null,
+  "files": [
+    {
+      "id": "lyHRshUw",
+      "hashes": {
+        "sha1": "81dc67983b9b2d9fa5e52a096ab125e6e03c3c3d",
+        "sha512": "86a94c36e02081d6c24f47d53e103c80e915e500a9f92536ceaf6af916ac083e5458a48fc8bff2ebfb44d449b51d1a32d2a7c2c8e3d057f997de99147ace3bc6"
+      },
+      "url": "https://cdn.modrinth.com/data/7vxePowz/versions/RvMf1qzl/FarmersDelight-26.2-3.6.26%2Brefabricated.jar",
+      "filename": "FarmersDelight-26.2-3.6.26+refabricated.jar",
+      "primary": true,
+      "size": 3476063,
+      "file_type": null
+    }
+  ],
+  "dependencies": [
+    {
+      "version_id": null,
+      "project_id": "u6dRKJwZ",
+      "file_name": null,
+      "dependency_type": "optional"
+    },
+    {
+      "version_id": null,
+      "project_id": "P7dR8mSH",
+      "file_name": null,
+      "dependency_type": "required"
+    },
+    {
+      "version_id": null,
+      "project_id": "5VolwT6c",
+      "file_name": null,
+      "dependency_type": "optional"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "game_versions": [
+    "26.3-rc-2"
+  ],
+  "loaders": [
+    "fabric"
+  ],
+  "environment": "client_or_server_prefers_both",
+  "id": "i5JXnZn6",
+  "project_id": "P7dR8mSH",
+  "author_id": "JZA4dW8o",
+  "featured": false,
+  "name": "[26.3-rc-2] Fabric API 0.160.4+26.3",
+  "version_number": "0.160.4+26.3",
+  "changelog": "- 26.3-rc-2 & Bump version (modmuss50)\n- Fix hud status bars for height != 10 (#5578) (Kevin)\n- Fix loot providers lacking reloadable registry context (#5583) (Cassian Godsted)\n",
+  "changelog_url": null,
+  "date_published": "2026-09-11T16:47:17.247308Z",
+  "downloads": 19459,
+  "version_type": "beta",
+  "status": "listed",
+  "requested_status": null,
+  "files": [
+    {
+      "id": "Iiz7YRa8",
+      "hashes": {
+        "sha512": "29d746fae1f4d6e9878aa580f90341ecd2ab665f97a48439e2f226bbd8c79d151dc5ad7a4306b9e488331c14b9a14ad7c471b11fa154070a6060a46f9ab0463c",
+        "sha1": "86cceb70e8a434e4a87ffa111347a912d9764677"
+      },
+      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5JXnZn6/fabric-api-0.160.4%2B26.3.jar",
+      "filename": "fabric-api-0.160.4+26.3.jar",
+      "primary": true,
+      "size": 2587950,
+      "file_type": null
+    }
+  ],
+  "dependencies": []
+}

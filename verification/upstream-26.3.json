@@ -1,0 +1,56 @@
+{
+  "game_versions": [
+    "26.3"
+  ],
+  "loaders": [
+    "fabric"
+  ],
+  "environment": "client_and_server",
+  "id": "hTNvMewX",
+  "project_id": "7vxePowz",
+  "author_id": "k9zWRRPK",
+  "featured": false,
+  "name": "Farmer's Delight Refabricated 3.6.27 - 26.3",
+  "version_number": "26.3-3.6.27",
+  "changelog": "### Fixes\n- Reversed models on the Stove.\n- Canvas signs not placing with the correct text colour.",
+  "changelog_url": null,
+  "date_published": "2026-09-19T13:43:56.883287Z",
+  "downloads": 49301,
+  "version_type": "release",
+  "status": "listed",
+  "requested_status": null,
+  "files": [
+    {
+      "id": "oy6O3fU0",
+      "hashes": {
+        "sha512": "d7c66b883e3c900a5539b2fec91c8a81d73ad438437151019843b958584f4c45bcb29581846056ff83787efea53fe0cd244106b4856a9979d7088eebba54da44",
+        "sha1": "8c00b5f004fafe157df7ddb241d32f28f458a4d6"
+      },
+      "url": "https://cdn.modrinth.com/data/7vxePowz/versions/hTNvMewX/FarmersDelight-26.3-3.6.27%2Brefabricated.jar",
+      "filename": "FarmersDelight-26.3-3.6.27+refabricated.jar",
+      "primary": true,
+      "size": 3486296,
+      "file_type": null
+    }
+  ],
+  "dependencies": [
+    {
+      "version_id": null,
+      "project_id": "P7dR8mSH",
+      "file_name": null,
+      "dependency_type": "required"
+    },
+    {
+      "version_id": null,
+      "project_id": "u6dRKJwZ",
+      "file_name": null,
+      "dependency_type": "optional"
+    },
+    {
+      "version_id": null,
+      "project_id": "5VolwT6c",
+      "file_name": null,
+      "dependency_type": "optional"
+    }
+  ]
+}

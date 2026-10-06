@@ -1,0 +1,15 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "#minecraft:mushrooms",
+    "#minecraft:mushrooms"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "minecraft:mushroom_stew"
+  }
+}

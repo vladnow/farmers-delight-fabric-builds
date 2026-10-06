@@ -1,0 +1,155 @@
+diff --git a/build.gradle b/build.gradle
+index e7e66ca..1ffcd3b 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -1,7 +1,5 @@
+ plugins {
+-    id 'net.fabricmc.fabric-loom' version '1.17-SNAPSHOT'
+-    id 'maven-publish'
+-    id "me.modmuss50.mod-publish-plugin" version "2.2.0"
++    id 'net.fabricmc.fabric-loom' version '1.17.21'
+ }
+ 
+ mod_version = minecraft_major_version + "-" + mod_version
+@@ -156,52 +154,6 @@ dependencies {
+ 
+ }
+ 
+-var changelogFile = rootProject.file("changelog.md")
+-var changelogText = changelogFile.exists() ? changelogFile.text : ""
+-
+-publishMods {
+-    file = jar.archiveFile
+-    changelog = changelogText
+-    type = STABLE
+-    displayName = "Farmer's Delight Refabricated ${mod_version.split("-")[1]} - ${minecraft_version}"
+-    version = mod_version
+-
+-    modLoaders.add("fabric")
+-
+-    curseforge {
+-        projectId = curseforge_project_id
+-
+-        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+-
+-        minecraftVersions.addAll(minecraft_supported_versions.split(","))
+-        javaVersions.add(JavaVersion.VERSION_25)
+-
+-        clientRequired = true
+-        serverRequired = true
+-
+-        requires("fabric-api")
+-//        optional("crafttweaker")
+-        optional("jei")
+-//        optional("roughly-enough-items")
+-//        optional("emi")
+-        optional("rrv")
+-    }
+-
+-    modrinth {
+-        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+-        projectId = modrinth_project_id
+-
+-        minecraftVersions.addAll(minecraft_supported_versions.split(","))
+-
+-        requires("fabric-api")
+-//        optional("crafttweaker")
+-        optional("jei")
+-//        optional("rei")
+-//        optional("emi")
+-        optional("rrv")
+-    }
+-}
+-
+ processResources {
+     var replaceProperties = [
+             minecraft_version    : minecraft_version,
+@@ -247,28 +199,12 @@ jar {
+     }
+ }
+ 
+-// configure the maven publication
+-publishing {
+-    publications {
+-        mavenJava(MavenPublication) {
+-            groupId project.group
+-            artifactId project.base.archivesName.get()
+-            version project.version
+-            from components.java
+-        }
+-    }
+ 
+-    repositories {
+-        maven {
+-            name "greenhouse"
+-            url "https://maven.greenhouse.lgbt/releases"
+-            credentials {
+-                username System.getenv('MAVEN_USERNAME')
+-                password System.getenv('MAVEN_PASSWORD')
+-            }
+-            authentication {
+-                create("basic", BasicAuthentication)
+-            }
+-        }
+-    }
+-}
+\ No newline at end of file
++// Preserve bundled third-party license notices in binary and source artifacts.
++jar {
++    from('licenses') { into 'META-INF/licenses' }
++}
++sourcesJar {
++    from('LICENSE')
++    from('licenses') { into 'META-INF/licenses' }
++}
+diff --git a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties
+index a351597..59d5b23 100644
+--- a/gradle/wrapper/gradle-wrapper.properties
++++ b/gradle/wrapper/gradle-wrapper.properties
+@@ -1,7 +1,9 @@
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+ distributionUrl=https\://services.gradle.org/distributions/gradle-9.6.1-bin.zip
+-networkTimeout=10000
++networkTimeout=60000
+ validateDistributionUrl=true
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
++
++distributionSha256Sum=9c0f7faeeb306cb14e4279a3e084ca6b596894089a0638e68a07c945a32c9e14
+diff --git a/src/main/resources/fabric.mod.json b/src/main/resources/fabric.mod.json
+index a5ddb9b..30c2d3c 100644
+--- a/src/main/resources/fabric.mod.json
++++ b/src/main/resources/fabric.mod.json
+@@ -48,6 +48,7 @@
+   ],
+   "accessWidener": "${mod_id}.classtweaker",
+   "depends": {
++    "java": ">=25",
+     "fabricloader": ">=0.19",
+     "fabric-api": "*",
+     "minecraft": "${minecraft_required}"
+diff --git a/src/main/resources/farmersdelight.mixins.json b/src/main/resources/farmersdelight.mixins.json
+index 6c6b7ca..3f6988e 100644
+--- a/src/main/resources/farmersdelight.mixins.json
++++ b/src/main/resources/farmersdelight.mixins.json
+@@ -17,8 +17,6 @@
+     "refabricated.FenceGateBlockMixin",
+     "refabricated.FoodDataAccessor",
+     "refabricated.GameRulesTypeAccessor",
+-    "refabricated.GhostSlotsInvoker",
+-    "refabricated.GuiGraphicsExtractorAccessor",
+     "refabricated.ItemStackMixin",
+     "refabricated.LevelMixin",
+     "refabricated.LivingEntityMixin",
+@@ -43,7 +41,9 @@
+     "refabricated.HumanoidModelMixin",
+     "refabricated.HumanoidRenderStateMixin",
+     "refabricated.SearchRecipeBookCategoryMixin",
+-    "refabricated.SignEditScreenMixin"
++    "refabricated.SignEditScreenMixin",
++    "refabricated.GhostSlotsInvoker",
++    "refabricated.GuiGraphicsExtractorAccessor"
+   ],
+   "injectors": {
+     "defaultRequire": 1
